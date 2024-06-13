@@ -1,5 +1,5 @@
 import numpy as np
-import scan_r
+from ddn3_extra import scan_r
 from joblib import Parallel, delayed
 
 
