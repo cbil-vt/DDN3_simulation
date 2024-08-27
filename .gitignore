@@ -141,7 +141,4 @@ dmypy.json
 # MacOS
 .DS_Store
 
-sim_fig_out/
-sim_low_diff/
-figures/
 temp/

@@ -13,6 +13,7 @@ We call the `huge` package to generate synthetic data. `JGL` and `iDINGO` contai
 Users need to Install R locally, and edit the path to R in `tools_r.py`.
 
 ```python
+import os
 os.environ["R_HOME"] = "C:\\Program Files\\R\\R-4.3.2"
 ```
 
@@ -22,10 +23,11 @@ The script below runs a simulation based on a 200-node graph with two scale-free
 It also runs methods on a grid of lambda1 and lambda2 values.
 
 ```python
-    l1_lst = np.arange(0.02, 1.0, 0.02)
-    l2_lst = np.arange(0, 0.16, 0.025)
-    graph_type = "scale-free-multi"
-    batch_run(l1_lst, l2_lst, n1=200, n2=200, n_node=200, ratio_diff=0.25, graph_type=graph_type, n_group=2, n_rep=20)
+import numpy as np
+l1_lst = np.arange(0.02, 1.0, 0.02)
+l2_lst = np.arange(0, 0.16, 0.025)
+graph_type = "scale-free-multi"
+batch_run(l1_lst, l2_lst, n1=200, n2=200, n_node=200, ratio_diff=0.25, graph_type=graph_type, n_group=2, n_rep=20)
 ```
 
 The simulation with imbalanced samples is in `exp_step1_batch_imbalance.py`. 
